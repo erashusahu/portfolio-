@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class='bx bx-bar-chart' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#Home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#Services">Services</a>
+            <!-- <a href="#portfolio">Portfolio</a> -->
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Ashutosh Sahu</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <!-- <img src=C:/portfolio/Images/pic1.png alt="My picture"> -->
+            <p>Hi! I’m a passionate Software Engineer with a strong focus on building scalable, 
+                <br>efficient, and user-friendly applications. 
+                <br>I’m always learning and looking for ways to improve my craft — whether it's by exploring new tools, 
+                <br>contributing to open-source, or collaborating with like-minded developers.
+            </p>
+            <div class="social-media">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <a href="#" class="btn-box">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="{{ url_for('static', filename='pic2.png') }}" alt="my image">
+        </div>
+
+    </section>
+    <!-- About section design -->
+     <Section class="about " id="about">
+        <div class="about-img">
+            <img src="https://media.istockphoto.com/id/537331500/photo/programming-code-abstract-technology-background-of-software-deve.jpg?s=612x612&w=0&k=20&c=jlYes8ZfnCmD0lLn-vKvzQoKXrWaEcVypHnB5MuO-g8=" alt="">
+
+
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Software Engineer</h3>
+            <p>I am a Software Engineer currently I am Persuing the my B.tech 
+                <br>From Global Institute of Technology and Management,
+                <br>My branch is Computer Science and Engineering.
+                <br>From the beginning of my career, I have passionate about technology and software development.
+                <br>Strating from my college days, from 1 year i afraid from coding 
+                <br>after some time, I start  learning and exploring new technologies.
+                <br>>Now I am a Python stack developer and I am focusing in to Become DATA ANALYTICS.
+            </p>
+            <a href="#" class="btn-box">Read More</a>
+
+
+        </div>
+
+     </Section>
+    <!-- Services section design -->
+     <section class="services" id="services">
+        <h2 class="heading">My <span>services</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <p>I am a web developer with a passion for creating dynamic and responsive websites. 
+                    <br>My expertise lies in HTML, CSS, JavaScript, and various frameworks.
+                    <br>I am dedicated to delivering high-quality code and ensuring a seamless user experience.
+                </p>
+                <a href="#" class="btn-box">Read More</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxl-python'></i>
+                <h3>Python</h3>
+                <p>I am a Python developer with a strong foundation in data structures and algorithms. 
+                    <br>I have experience in building web applications using Django and Flask.
+                    <br>My goal is to leverage Python's capabilities to create efficient and scalable solutions.
+                </p>
+                <a href="#" class="btn-box">Read More</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxs-data'></i>
+                <h3>Data Analytics</h3>
+                <p>currently on learning Data Analytics. 
+                    <br>I am passionate about extracting insights from data and using them to drive business decisions.
+                    <br>I am proficient in Python, SQL, and data visualization tools like Tableau and Power BI.
+                </p>
+                <a href="#" class="btn-box">Read More</a>
+            </div>
+        </div>
+
+     </section>
+    <!-- Contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>ME</span></h2>
+
+        <form id="contact-form" action="/submit" method ="post">
+            <div class="input-box">
+                <input type="text" name="user_name" placeholder="Your name" required>
+                <input type="email" name="user_email" placeholder="Your email" required>
+            </div>
+            <div class="input-box">
+                <input type="number" name="user_number" placeholder="Your number" required>
+                <input type="text"  name="subject" placeholder="Your subject" required>
+            </div>
+            <textarea name="message" id="" col="35" row="20" placeholder="Description"></textarea>
+            <input type="submit" class="btn-box">
+        </form>
+    </section>
+    <!-- Footer section design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by @ashutoshcode | All rights are reserved</p>
+            <p>Designed by Ashutosh Sahu <br> Contact Details- 7869231701, E-mail- sahuashutosh1408@gmail.com</p>
+
+            
+        </div>
+        <div class="footer-icontop">
+            <a href="#"><i class='bx bx-chevron-up'></i></a>
+        </div>
+    </footer>
+    <!-- Scroll Reveal JS CDN -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    
+</body>
+</html>
