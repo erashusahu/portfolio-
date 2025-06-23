@@ -3,75 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Ashutosh Sahu</title>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
-        <i class='bx bx-bar-chart' id="menu-icon"></i>
+        <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
             <a href="#Home" class="active">Home</a>
             <a href="#about">About</a>
-            <a href="#Services">Services</a>
-            <!-- <a href="#portfolio">Portfolio</a> -->
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
-
     </header>
-    <section class="home">
+
+    <section class="home" id="Home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
             <h1>Ashutosh Sahu</h1>
             <h3>And I'm a <span class="multiple-text"></span></h3>
-            <!-- <img src=C:/portfolio/Images/pic1.png alt="My picture"> -->
-            <p>Hi! I’m a passionate Software Engineer with a strong focus on building scalable, 
+            <p>Hi! I'm a passionate Software Engineer with a strong focus on building scalable, 
                 <br>efficient, and user-friendly applications. 
-                <br>I’m always learning and looking for ways to improve my craft — whether it's by exploring new tools, 
+                <br>I'm always learning and looking for ways to improve my craft — whether it's by exploring new tools, 
                 <br>contributing to open-source, or collaborating with like-minded developers.
             </p>
             <div class="social-media">
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-whatsapp'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.facebook.com/ashutosh.sahu.1408" target="_blank" rel="noopener noreferrer" title="Facebook">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="https://www.instagram.com/_ashu_sahu14/?hl=en" target="_blank" rel="noopener noreferrer" title="Instagram">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+                <a href="https://wa.me/917869231701" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                    <i class='bx bxl-whatsapp'></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ashutosh-sahu-514aa5242/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://github.com/erashusahu" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <i class='bx bxl-github'></i>
+                </a>
             </div>
-            <a href="#" class="btn-box">Download CV</a>
+            <a href="/download-cv" class="btn-box">Download CV</a>
         </div>
 
         <div class="home-img">
-            <img src="{{ url_for('static', filename='pic4.jpg') }}" alt="my image">
+            <img src="{{ url_for('static', filename='pic4.jpg') }}" alt="Ashutosh Sahu">
         </div>
-
     </section>
+
     <!-- About section design -->
-     <Section class="about " id="about">
+    <section class="about" id="about">
         <div class="about-img">
-            <img src="https://media.istockphoto.com/id/537331500/photo/programming-code-abstract-technology-background-of-software-deve.jpg?s=612x612&w=0&k=20&c=jlYes8ZfnCmD0lLn-vKvzQoKXrWaEcVypHnB5MuO-g8=" alt="">
-
-
+            <img src="https://media.istockphoto.com/id/537331500/photo/programming-code-abstract-technology-background-of-software-deve.jpg?s=612x612&w=0&k=20&c=jlYes8ZfnCmD0lLn-vKvzQoKXrWaEcVypHnB5MuO-g8=" alt="Programming Code Background">
         </div>
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
             <h3>Software Engineer</h3>
-            <p>I am a Software Engineer currently I am Persuing the my B.tech 
-                <br>From Global Institute of Technology and Management,
+            <p>I am a Software Engineer currently pursuing my B.Tech 
+                <br>from Global Institute of Technology and Management.
                 <br>My branch is Computer Science and Engineering.
-                <br>From the beginning of my career, I have passionate about technology and software development.
-                <br>Strating from my college days, from 1 year i afraid from coding 
-                <br>after some time, I start  learning and exploring new technologies.
-                <br>>Now I am a Python stack developer and I am focusing in to Become DATA ANALYTICS.
+                <br>From the beginning of my career, I have been passionate about technology and software development.
+                <br>Starting from my college days, for 1 year I was afraid of coding,
+                <br>but after some time, I started learning and exploring new technologies.
+                <br>Now I am a Python stack developer and I am focusing on becoming a DATA ANALYST.
             </p>
             <a href="#" class="btn-box">Read More</a>
-
-
         </div>
+    </section>
 
-     </Section>
     <!-- Services section design -->
-     <section class="services" id="services">
-        <h2 class="heading">My <span>services</span></h2>
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
         <div class="services-container">
             <div class="services-box">
                 <i class='bx bx-code-alt'></i>
@@ -84,7 +90,7 @@
             </div>
             <div class="services-box">
                 <i class='bx bxl-python'></i>
-                <h3>Python</h3>
+                <h3>Python Development</h3>
                 <p>I am a Python developer with a strong foundation in data structures and algorithms. 
                     <br>I have experience in building web applications using Django and Flask.
                     <br>My goal is to leverage Python's capabilities to create efficient and scalable solutions.
@@ -94,52 +100,149 @@
             <div class="services-box">
                 <i class='bx bxs-data'></i>
                 <h3>Data Analytics</h3>
-                <p>currently on learning Data Analytics. 
+                <p>Currently learning Data Analytics. 
                     <br>I am passionate about extracting insights from data and using them to drive business decisions.
                     <br>I am proficient in Python, SQL, and data visualization tools like Tableau and Power BI.
                 </p>
                 <a href="#" class="btn-box">Read More</a>
             </div>
         </div>
+    </section>
 
-     </section>
+    <!-- Projects section design -->
+    <section class="projects" id="projects">
+        <h2 class="heading">My <span>Projects</span></h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-image">
+                    <i class='bx bx-world'></i>
+                </div>
+                <div class="project-content">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A responsive portfolio website built with Flask, featuring contact form functionality, PostgreSQL database integration, and modern design. Includes admin dashboard for managing contact submissions.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/erashusahu" target="_blank" class="project-btn">
+                            <i class='bx bxl-github'></i> Code
+                        </a>
+                        <a href="#" class="project-btn">
+                            <i class='bx bx-link-external'></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <i class='bx bx-data'></i>
+                </div>
+                <div class="project-content">
+                    <h3>Data Analytics Dashboard</h3>
+                    <p>Interactive data visualization dashboard using Python for data processing and analysis. Features real-time charts, filtering capabilities, and export functionality for business insights.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/erashusahu" target="_blank" class="project-btn">
+                            <i class='bx bxl-github'></i> Code
+                        </a>
+                        <a href="#" class="project-btn">
+                            <i class='bx bx-link-external'></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <i class='bx bx-mobile-alt'></i>
+                </div>
+                <div class="project-content">
+                    <h3>Web Application Framework</h3>
+                    <p>Full-stack web application built with modern frameworks, featuring user authentication, database integration, and responsive design. Demonstrates proficiency in both frontend and backend development.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/erashusahu" target="_blank" class="project-btn">
+                            <i class='bx bxl-github'></i> Code
+                        </a>
+                        <a href="#" class="project-btn">
+                            <i class='bx bx-link-external'></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <i class='bx bx-hospital'></i>
+                </div>
+                <div class="project-content">
+                    <h3>Clinical Management System</h3>
+                    <p>Comprehensive healthcare management platform developed for Nyson AI Connect company. Features multi-role authentication (doctor, patient, staff), appointment booking system, patient report management, prescription handling, and real-time dashboard. Currently in production with active users.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Team Project</span>
+                        <span class="tech-tag">Production</span>
+                        <span class="tech-tag">Healthcare</span>
+                        <span class="tech-tag">Multi-role Auth</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/erashusahu" target="_blank" class="project-btn">
+                            <i class='bx bxl-github'></i> Code
+                        </a>
+                        <a href="#" class="project-btn">
+                            <i class='bx bx-shield-check'></i> In Production
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Contact section design -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>ME</span></h2>
-
-        <form id="contact-form" action="/submit" method ="post">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form id="contact-form" action="/submit" method="post">
             <div class="input-box">
                 <input type="text" name="user_name" placeholder="Your name" required>
                 <input type="email" name="user_email" placeholder="Your email" required>
             </div>
             <div class="input-box">
-                <input type="number" name="user_number" placeholder="Your number" required>
-                <input type="text"  name="subject" placeholder="Your subject" required>
+                <input type="tel" name="user_number" placeholder="Your number" required>
+                <input type="text" name="subject" placeholder="Your subject" required>
             </div>
-            <textarea name="message" id="" col="35" row="20" placeholder="Description"></textarea>
-            <input type="submit" class="btn-box">
+            <textarea name="message" cols="35" rows="20" placeholder="Description" required></textarea>
+            <input type="submit" value="Send Message" class="btn-box">
         </form>
     </section>
+
     <!-- Footer section design -->
     <footer class="footer">
         <div class="footer-text">
             <p>Copyright &copy; 2025 by @ashutoshcode | All rights are reserved</p>
             <p>Designed by Ashutosh Sahu <br> Contact Details- 7869231701, E-mail- sahuashutosh1408@gmail.com</p>
-
-            
         </div>
         <div class="footer-icontop">
-            <a href="#"><i class='bx bx-chevron-up'></i></a>
+            <a href="#Home"><i class='bx bx-chevron-up'></i></a>
         </div>
     </footer>
-    <!-- Scroll Reveal JS CDN -->
+
+    <!-- JavaScript Libraries -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-
-    
 </body>
 </html>
